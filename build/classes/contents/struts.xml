@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+   "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+   "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<package name="default" extends="struts-default">
+		<action name="processStudentDetails" class="contents.StudentAction" method="fillStudentDetails">
+	            <result name="winner">/WinnerAcknowledgement.jsp</result>
+	            <result name="simple">/SimpleAcknowledgement.jsp</result>
+	    </action>
+	    <action name="populateStudentDetails" class="contents.StudentAction" method="getStudentDetails">
+	    		<result name="studentdetails">/student.jsp</result>
+	    		<result name="nosuchstudent">/studentnotfound.jsp</result>
+	    </action>
+	</package>
+</struts>
